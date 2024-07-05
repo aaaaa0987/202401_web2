@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>簡単な四則演算</h1>
+    <form id="calc"  action="javascript:void(0)">
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+        <input type="submit">
+    </form>
+    <div style="display:flex">
+        <div>
+            <p>足し算の結果&nbsp;</p>
+            <p id="tashi"></p>
+        </div>
+        <div>
+            <p>引き算の結果&nbsp;</p>
+            <p id="hiki"></p>
+        </div>
+        <div>
+            <p>掛け算の結果&nbsp;</p>
+            <p id="kake"></p>
+        </div>
+        <div>
+            <p>割り算の結果&nbsp;</p>
+            <p id="wari"></p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // form の取得
+        const form = document.getElementById('calc');
+        // イベントリスナ
+        form.addEventListener('submit', function(event){
+            // 入力された文字の取得
+            const num1 = Number(document.getElementById('num1').value);
+            const num2 = Number(document.getElementById('num2').value);
+            // 計算結果を格納
+            let sum = num1 + num2;
+            document.getElementById("tashi").innerHTML = String(sum);
+            let sub = num1 -num2;
+            document.getElementById("hiki").innerHTML = String(sub);
+            let multi = num1 * num2;
+            document.getElementById('kake').innerHTML = String(multi);
+            let divi = num1 / num2;
+            document.getElementById('wari').innerHTML = String(divi);
+        });
+    </script>
+</body>
+</html>

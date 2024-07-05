@@ -1,0 +1,19 @@
+・JavaScriptとは
+ブラウザ上で動くスクリプト言語。
+WEBページに動きを持たせるための役割がある。
+
+・コードを書く場所
+①<head>タグ内に書く
+★②</body>タグの直前に書く
+★③</body>タグの直前にjsファイルを作成して読み込む
+
+・書き方
+①と②
+<script type="text/javascript">
+//ここにプログラムを書く
+</script>
+③<script type="text/javascript" src="jsファイルのパス"></script>
+
+★なぜ</body>の直前なのか
+htmlの要素の中にJavaScriptを書くと、
+そこでhtmlの読み込みが停止してしまうため

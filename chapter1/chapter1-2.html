@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>こんにちは！</p>
+    <p id="text">こんばんは</p>
+    <p class="text-class">hello world</p>
+    <h1 class="text-class">aa</h1>
+    <input type="text" name="text-name">
+    <script type="text/javascript">
+        //こんにちはの要素取得(タグを指定して)
+        //html collection -> 0 に表示される（<p>html collection[0]に<p>がある）
+        document.getElementsByTagName('p');
+
+        //<p>の配列ごとconsoleに取得
+        console.log(document.getElementsByTagName('p'));
+
+        //<p>は配列として呼び出されるため[i]で配列番号を指定すると特定の<p>の要素が取り出せる
+        console.log(document.getElementsByTagName('p')[0].innerText);
+
+        //こんばんはの要素取得 *idは一つしか持てない -> Element (sいらない)
+        //html.collection -> 1に表示される (p#textは<p>html collection[1]にある)
+        document.getElementById('text');  
+        console.log(document.getElementById('text'));
+        console.log(document.getElementById('text').textContent);
+
+        //hello worldの要素取得
+        //html collection -> 2 に表示される(p.text-classは<p>html collection[2]にある)
+        document.getElementsByClassName('text-class');
+
+        //テキスト入力の要素取得
+        document.getElementsByName('text-name');
+
+        //セレクタを指定して要素取得(最初の一つだけ)
+        document.querySelector('p');
+        
+        //セレクタを指定して要素取得(要素すべて)
+        document.querySelectorAll('.text-class');
+
+
+
+        //devtool -> console -> html collection にはタグごとに配列として各タグの要素が表示できる
+        console.log(document.getElementsByTagName('h1'));
+        document.getElementsByTagName('h1');
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Input Alert</title>
+</head>
+<body>
+  <input type="text" id="user-input">
+  <button id="submit-button">Submit</button>
+
+  <script>
+    const userInputField = document.getElementById('user-input');
+    const submitButton = document.getElementById('submit-button');
+
+    submitButton.addEventListener('click', function() {
+      const enteredText = userInputField.value;
+      alert(`You entered: ${enteredText}`);
+    });
+  </script>
+</body>
+</html>
+

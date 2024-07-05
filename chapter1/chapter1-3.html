@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="event-button">ボタン</button>
+    <a href="https://qiita.com/sho_U/items/9df2bc122689870ef046">https://qiita.com/sho_U/items/9df2bc122689870ef046</a>
+    <p id="demo"></p>
+    <script type="text/javascript">
+        const button = document.getElementById('event-button');
+
+        //event listener：event(click) と event handler(function(event))を結びつける
+        //ボタンが押された時の処理
+        // button.addEventListener('click', function(event){
+        //     alert('ボタンが押されました');
+        // });
+
+        // //マウスが要素の上に乗った時の処理(mouseenter)
+        // button.addEventListener('mouseenter', function(event){
+        //     alert('ボタンの上にマウスが置かれました');
+        // });
+
+        // //マウスが要素から離れた時の処理
+        // button.addEventListener('mouseleave', function(event){
+        //     alert('ボタン以外にカーソルがあります');
+        // });
+
+        button.addEventListener('mouseover', myFunction1);
+        button.addEventListener('click', myFunction2);
+        button.addEventListener('mouseout', myFunction3);
+
+        function myFunction1(){
+            document.getElementById("demo").innerHTML += "Moused over!<br>";
+        }
+        function myFunction2(){
+            document.getElementById("demo").innerHTML += "Clicked!<br>";
+        }
+        function myFunction3(){
+            document.getElementById("demo").innerHTML += "Moused out!<br>";
+        }
+    </script>
+</body>
+</html>

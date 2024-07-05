@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>テキスト判別システム</h1>
+    <form id="textForm">
+        <label id="aaa">テキストを入力してください</label>
+        <input for="aaa" type="text" id="intext">
+        <input type="submit" value="送信" id="event-button">
+        <!-- <button id="b2">送信あ</button> -->
+    </form>
+    <script type="text/javascript">
+        //form を取得 (getting event button does NOT work)
+        const form = document.getElementById('textForm');
+        form.addEventListener('submit', function(event){
+            alert(document.getElementById('intext').value);
+        });
+
+    </script>
+</body>
+</html>
